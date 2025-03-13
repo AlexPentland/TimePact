@@ -1,8 +1,0 @@
-// 2.2 zkProof Generator
-function generateFocusProof(uint256 sessionID) external {
-    zkProof memory proof = zkSnark.prove(
-        focusSessions[sessionID].gammaData,
-        focusSessions[sessionID].timestamp
-    );
-    emit ProofGenerated(sessionID, proof);
-}
