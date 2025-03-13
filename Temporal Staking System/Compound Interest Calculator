@@ -1,0 +1,5 @@
+// 4.2 Compound Interest Calculator
+function calculateYield(address user) public view returns (uint256) {
+    uint256 stakedDays = (block.timestamp - stakingStart[user]) / 86400;
+    return timeLocked[user] * (102 ** stakedDays) / (100 ** stakedDays); // 2%日复利
+}
