@@ -1,6 +1,0 @@
-// 5.1 Quadratic Voting
-function vote(uint256 proposalID, uint256 ttAmount) external {
-    uint256 votingPower = sqrt(ttAmount);
-    proposals[proposalID].totalVotes += votingPower;
-    lockedTT[msg.sender] += ttAmount;
-}
