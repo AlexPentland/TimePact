@@ -1,5 +1,0 @@
-// 3.2 Time Lock for New Users
-function firstMint() external {
-    require(block.timestamp - registrationTime[msg.sender] > 1 days, "24h lock");
-    _mint(msg.sender, 1 * 10 ** decimals());
-}

@@ -1,6 +1,0 @@
-// 3.1 Device Fingerprinting
-modifier checkDeviceID() {
-    bytes32 newDeviceID = keccak256(abi.encodePacked(msg.sender, block.prevrandao));
-    require(deviceRegistry[msg.sender] == newDeviceID, "Device mismatch");
-    _;
-}
