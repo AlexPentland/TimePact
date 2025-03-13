@@ -1,0 +1,5 @@
+// 5.2 Proposal Time Decay
+function proposalWeight(uint256 proposalID) public view returns (uint256) {
+    uint256 hoursActive = (block.timestamp - proposals[proposalID].createdAt) / 3600;
+    return initialWeight[proposalID] * (95 ** hoursActive) / (100 ** hoursActive); // 每小时衰减5%
+}
