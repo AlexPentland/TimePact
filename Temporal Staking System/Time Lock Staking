@@ -1,7 +1,0 @@
-// 4.1 Time Lock Staking
-function stakeTT(uint256 amount, uint256 lockDays) external {
-    require(lockDays >= 7, "Minimum 7-day lock");
-    timeLocked[msg.sender] += amount;
-    stakingStart[msg.sender] = block.timestamp;
-    _transfer(msg.sender, address(this), amount);
-}
